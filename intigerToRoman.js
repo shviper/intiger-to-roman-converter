@@ -1,8 +1,4 @@
-/**
- * @param {number} num
- * @return {string}
- */
-var intToRoman = function (num) {
+const intToRoman = (num) => {
   const map = {
     M: 1000,
     CM: 900,
@@ -33,4 +29,11 @@ var intToRoman = function (num) {
   }
 
   return result;
+};
+
+const showResult = () => {
+  let number = document.getElementById("number").value;
+  let result = document.getElementById("result");
+  result.innerHTML = `<h5 class="text-center p-2"style="background: rgba(255, 0, 0, 0.11)"
+                    >${intToRoman(number)}</h5>`;
 };
